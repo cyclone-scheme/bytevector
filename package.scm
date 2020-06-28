@@ -1,0 +1,16 @@
+(package
+ (name bytevector)
+ (version 0.1)
+ (license "BSD")
+ (authors "Alex Shinn")
+ (maintainers "Arthur Maciel")
+ (description "Additional bytevector utilities.")
+ (tags "data-structures")
+ (docs "https://github.com/cyclone-scheme/cyclone-winds/wiki/bytevector")
+ (test "test.scm")
+ (dependencies ())
+ (test-dependencies ())
+ (foreign-dependencies ())
+ (library
+   (name (cyclone bytevector))
+   (description "Additional bytevector utilities.")))
