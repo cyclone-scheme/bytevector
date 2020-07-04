@@ -58,12 +58,13 @@
         (bytevector-ieee-single-native-set! bv 0 (car ls))
         (test bv (bytevector-copy f32-le i (+ i 4)))))
 
-    (do ((ls floats (cdr ls))
-         (i 0 (+ i 8)))
-        ((null? ls))
-      (let ((bv (make-bytevector 8 0)))
-        (bytevector-ieee-double-native-set! bv 0 (car ls))
-        (test bv (bytevector-copy f64-le i (+ i 8))))))
+    ;; (do ((ls floats (cdr ls))
+    ;;      (i 0 (+ i 8)))
+    ;;     ((null? ls))
+    ;;   (let ((bv (make-bytevector 8 0)))
+    ;;     (bytevector-ieee-double-native-set! bv 0 (car ls))
+    ;;     (test bv (bytevector-copy f64-le i (+ i 8)))))
+    )
 
   (test-group "ber integers"
     (do ((ls '(0 1 128 16383 32767
