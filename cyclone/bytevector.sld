@@ -23,7 +23,8 @@
    bytevector-ieee-double-set!
    bytevector-ieee-double-native-set!)
   (import (scheme base)
-          (scheme inexact))
+          (scheme inexact)
+          (srfi 60))
   (cond-expand
    (big-endian
     (begin
@@ -33,9 +34,5 @@
     (begin
       (define-syntax native-endianness
         (syntax-rules () ((_) 'little))))))
-  (cond-expand
-   ((library (srfi 151)) (import (srfi 151)))
-   ((library (srfi 33)) (import (srfi 33)))
-   (else (import (srfi 60))))
   (include "bytevector.scm")
   (include "ieee-754.scm"))
