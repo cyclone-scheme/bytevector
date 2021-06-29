@@ -106,7 +106,7 @@ Alex Shinn
 Arthur Maciel
 
 ## Version 
-0.1
+"0.1.0"
 
 ## License 
 BSD
